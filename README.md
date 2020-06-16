@@ -1,5 +1,5 @@
 # d
-A convenient deno-invoking version manager for [Deno](https://deno.land).
+A convenient `deno`-invoking version manager for [Deno](https://deno.land).
 
 ## TL;DR
 Examples below assume `d` is in your path.
@@ -29,11 +29,12 @@ Welcome to Deno 🦕
 
 ## Basics
 `d` uses the `deno` version specified in this order:
-1. Via the `d` command line argument `--use`.
-2. From the file `.drc` from
-    1. the current directory tree up to the root, then
-    2. your home directory, then
-    3. the `d` home directory.
+1. d command line argument `-u` or `--use`.
+2. Environment variable `DENO_VERSION`.
+3. The d rc file up the current directory tree, beginning in the current directory.
+4. The d rc file in the user's home directory.
+5. d rc file in the d home directory.
+6. The file `.drc` in the d home directory.
 
 If not found, `d` downloads the specified, or latest if unspecified, version of `deno` and uses that.
 
