@@ -31,10 +31,10 @@ Welcome to Deno 🦕
 `d` uses the `deno` version specified in this order:
 1. d command line argument `-u` or `--use`.
 2. Environment variable `DENO_VERSION`.
-3. The d rc file up the current directory tree, beginning in the current directory.
-4. The d rc file in the user's home directory.
-5. d rc file in the d home directory.
-6. The file `.drc` in the d home directory.
+3. The `d` rc file, default `.drc`, up the current directory tree, beginning in the current directory.
+4. The `d` rc file in the user's home directory.
+5. The `d` rc file in the d home directory.
+6. The file `.drc` in the `d` home directory.
 
 If not found, `d` downloads the specified, or latest if unspecified, version of `deno` and uses that.
 
@@ -43,9 +43,7 @@ Simply store the `deno` version number in the `.drc` file wherever you want to u
 By default, `d` stores `deno` versions in `~/.d`.
 Downloaded zip distros of deno are cached in the `d` home dir.
 
-Override that location by using `d` argument `--home` or setting envvar `DENO_D_HOME`.
+Override that location by using `d` argument `--d-home` or setting envvar `DENO_D_HOME`.
 
 By default, all arguments are passed along to `deno`, unless there is a `--` argument specified.
 In that case, all arguments passed along to `d` precede the `--`, and all arguments following `--` are passed along to `deno`.
-
-
